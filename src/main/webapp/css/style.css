@@ -1,0 +1,4 @@
+/* Custom CSS for specific width of vertical nav-pills */
+.nav flex-column nav-pills me-3 {
+    width: 800px; /* Set the desired width */
+}
