@@ -63,26 +63,26 @@ public class CandidatDao {
             }
         }
         return null; // User not found
+    
     }
-
-    // Method to retrieve all users
-    public List<Candidat> getAll() throws SQLException {
-        List<Candidat> userList = new ArrayList<>();
-        String query = "SELECT * FROM Eleve";
-        try (PreparedStatement statement = connection.prepareStatement(query);
-                ResultSet res = statement.executeQuery()) {
-            while (res.next()) {
-                int id = res.getByte("id");
-                String nom = res.getString("nom");
-                String prenom = res.getString("prenom");
-                String adresse = res.getString("adresse");
-                String telephone = res.getString("telephone");
-                userList.add(new Candidat(id, nom, prenom, adresse, telephone));
-            }
+    
+public boolean isSigned(String name, String password) {
+    String query = "SELECT * FROM Eleve WHERE nom = ? AND password = ?";
+    try ( // Assuming you have a method to get connection
+         PreparedStatement statement = connection.prepareStatement(query)) {
+        statement.setString(1, name);
+        statement.setString(2, password);
+        try (ResultSet res = statement.executeQuery()) {
+            return res.next(); // If there's a match, return true; else false.
         }
-        System.out.println(userList);
-        return userList;
+    } catch (SQLException e) {
+        // Handle any SQL exceptions that occur during execution
+        e.printStackTrace(); // Replace this with appropriate error handling
     }
+    return false; // Return false if an exception occurred
+}
+
+
 
     // Method to save a new user
     public int save(Candidat user) throws SQLException {

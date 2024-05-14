@@ -17,7 +17,7 @@
             <div class="container-fluid">
                 <!-- Logo on the left -->
                 <div class="navbar-brand">
-                    <img src="./images/horizon.png" width="90px" alt="Logo">
+                    <img src="../images/horizon.png" width="90px" alt="Logo">
                 </div>
                 <!-- Title centered -->
                 <h1 class="navbar-brand mx-auto">HORIZON</h1>
@@ -34,7 +34,7 @@
                     class="nav-link active"
                     id="v-pills-accueil-tab"
                     data-bs-toggle="pill"
-                    href="accueil.jsp"
+                    href="#v-pills-accueil"
                     role="tab"
                     aria-controls="v-pills-accueil"
                     aria-selected="true"
@@ -44,19 +44,20 @@
                     class="nav-link"
                     id="v-pills-candidat-tab"
                     data-bs-toggle="pill"
-                    href="candidat.jsp"
+                    
+                    href="#v-pills-candidat"
                     role="tab"
                     aria-controls="v-pills-candidat"
                     aria-selected="false"
                     >Gestion Candidat</a
                 >
                 <a
-                    href="/login"
+                     href="#v-pills-vehicule"
                     class="nav-link"
-                    id="v-pills-candidat-tab"
+                    id="v-pills-vehicule-tab"
                     data-bs-toggle="pill"
                     role="tab"
-                    aria-controls="v-pills-candidat"
+                    aria-controls="v-pills-vehicule"
                     aria-selected="false"
                     >Gestion Véhicule</a
                 >
@@ -64,7 +65,7 @@
                     class="nav-link"
                     id="v-pills-moniteur-tab"
                     data-bs-toggle="pill"
-                    href="moniteur.jsp"
+                     href="#v-pills-moniteur"
                     role="tab"
                     aria-controls="v-pills-moniteur"
                     aria-selected="false"
@@ -74,7 +75,7 @@
                     class="nav-link"
                     id="v-pills-seance-tab"
                     data-bs-toggle="pill"
-                    href="seance.jsp"
+                    href="#v-pills-seance"
                     role="tab"
                     aria-controls="v-pills-seance"
                     aria-selected="false"
@@ -84,7 +85,7 @@
                     class="nav-link"
                     id="v-pills-cours-tab"
                     data-bs-toggle="pill"
-                    href="cours.jsp"
+                    href="#v-pills-cours"
                     role="tab"
                     aria-controls="v-pills-cours"
                     aria-selected="false"
@@ -94,7 +95,7 @@
                     class="nav-link"
                     id="v-pills-examen-tab"
                     data-bs-toggle="pill"
-                    href="examen.jsp"
+                     href="#v-pills-examen"
                     role="tab"
                     aria-controls="v-pills-examen"
                     aria-selected="false"
@@ -102,21 +103,21 @@
                 >
                 <a
                     class="nav-link"
-                    id="v-pills-seance-tab"
+                    id="v-pills-facteure-tab"
                     data-bs-toggle="pill"
-                    href="facture.jsp"
+                     href="#v-pills-facteure"
                     role="tab"
-                    aria-controls="v-pills-seance"
+                    aria-controls="v-pills-facteure"
                     aria-selected="false"
                     >Gestion Facture</a
                 >
                 <a
                     class="nav-link"
-                    id="v-pills-statistique-tab"
+                    id="v-pills-reservation-tab"
                     data-bs-toggle="pill"
-                    href="reservation.jsp"
+                    href="#v-pills-reservation"
                     role="tab"
-                    aria-controls="v-pills-statistique"
+                    aria-controls="v-pills-reservation"
                     aria-selected="false"
                     >Gestion Reservation</a
                 >
@@ -124,7 +125,7 @@
                     class="nav-link"
                     id="v-pills-statistique-tab"
                     data-bs-toggle="pill"
-                    href="statistique.jsp"
+                     href="#v-pills-statistique"
                     role="tab"
                     aria-controls="v-pills-statistique"
                     aria-selected="false"

@@ -1,6 +1,7 @@
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/DatabaseConnector.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/CandidatServlet.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/auth/Login.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/Dashboard.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/auth/Register.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Candidat.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/resources/JakartaEE10Resource.java
