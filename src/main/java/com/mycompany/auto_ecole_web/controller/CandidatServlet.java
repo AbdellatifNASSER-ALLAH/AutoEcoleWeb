@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Abdellatif
  */
-@WebServlet(name = "CandidatServlet", urlPatterns = { "/CandidatServlet" })
+@WebServlet( "/CandidatServlet" )
 public class CandidatServlet extends HttpServlet {
 
     @Override

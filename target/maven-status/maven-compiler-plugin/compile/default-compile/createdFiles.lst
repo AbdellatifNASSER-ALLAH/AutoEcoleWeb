@@ -1,6 +1,8 @@
-com\mycompany\auto_ecole_web\JakartaRestConfiguration.class
-com\mycompany\auto_ecole_web\dao\CandidatDao.class
-com\mycompany\auto_ecole_web\controller\CandidatServlet.class
-com\mycompany\auto_ecole_web\resources\JakartaEE10Resource.class
-com\mycompany\auto_ecole_web\dao\DatabaseConnector.class
-com\mycompany\auto_ecole_web\model\Candidat.class
+com/mycompany/auto_ecole_web/model/Candidat.class
+com/mycompany/auto_ecole_web/resources/JakartaEE10Resource.class
+com/mycompany/auto_ecole_web/auth/Login.class
+com/mycompany/auto_ecole_web/dao/CandidatDao.class
+com/mycompany/auto_ecole_web/auth/Register.class
+com/mycompany/auto_ecole_web/controller/CandidatServlet.class
+com/mycompany/auto_ecole_web/dao/DatabaseConnector.class
+com/mycompany/auto_ecole_web/JakartaRestConfiguration.class

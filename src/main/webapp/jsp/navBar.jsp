@@ -51,10 +51,10 @@
                     >Gestion Candidat</a
                 >
                 <a
+                    href="/login"
                     class="nav-link"
                     id="v-pills-candidat-tab"
                     data-bs-toggle="pill"
-                    href="vehicule.jsp"
                     role="tab"
                     aria-controls="v-pills-candidat"
                     aria-selected="false"
