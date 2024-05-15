@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,20 +9,16 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
             /* Custom CSS for session management page */
-
             body {
                 background-color: #f8f9fa; /* Light gray background */
             }
-
             .container {
                 margin-top: 50px;
             }
-
             .card {
                 border-radius: 15px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
-
             .card-header {
                 background-color: #007bff; /* Blue header */
                 color: #fff; /* White text */
@@ -31,45 +26,36 @@
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
             }
-
             .card-body {
                 padding: 20px;
             }
-
             .form-label {
                 font-weight: bold;
             }
-
             .btn-primary {
                 background-color: #007bff; /* Blue button */
                 border-color: #007bff;
             }
-
             .btn-primary:hover {
                 background-color: #0056b3; /* Darker blue on hover */
                 border-color: #0056b3;
             }
-
             .table {
                 background-color: #fff; /* White background */
                 border-radius: 15px;
             }
-
             .table th,
             .table td {
                 border-top: none; /* Remove top border */
             }
-
             .table th {
                 background-color: #007bff; /* Blue header */
                 color: #fff; /* White text */
                 border-bottom: none; /* Remove bottom border */
             }
-
             .table tbody tr:nth-of-type(even) {
                 background-color: #f2f2f2; /* Alternate row color */
             }
-
         </style>
     </head>
     <body>
@@ -155,15 +141,5 @@
         <script>
             // Additional JavaScript can be added here
         </script>
-=======
-!<html>
-    <head>
-        <title>Seance</title>
-    </head>
-    <body>
-        <%@ include file="navBar.jsp" %>
-        
-        <h1>Hello Seance</h1>
->>>>>>> Stashed changes
     </body>
 </html>

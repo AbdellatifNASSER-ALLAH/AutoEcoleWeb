@@ -62,7 +62,37 @@ public int calculCandidats() {
         }
         return null; // User not found
     }
+    
+    // is Signed
+  // Méthode pour vérifier si un utilisateur est enregistré dans la base de données
+    public boolean isSigned(String username, String password) throws SQLException {
+        // Connexion à la base de données (vous devrez peut-être ajuster cela en fonction de votre configuration)
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
 
+        try {
+            // Requête SQL pour vérifier si l'utilisateur existe avec le nom d'utilisateur et le mot de passe fournis
+            String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+            resultSet = preparedStatement.executeQuery();
+
+            // Si une ligne est renvoyée, cela signifie que l'utilisateur existe
+            return resultSet.next();
+        } finally {
+            // Fermeture des ressources
+            if (resultSet != null) {
+                resultSet.close();
+            }
+            if (preparedStatement != null) {
+                preparedStatement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        }
+    }
     // Method to retrieve all users
     public List<Candidat> getAll() throws SQLException {
         List<Candidat> userList = new ArrayList<>();

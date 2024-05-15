@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,20 +9,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Custom CSS for statistics panel */
-
         body {
             background-color: #f8f9fa; /* Light gray background */
         }
-
         .container {
             margin-top: 50px;
         }
-
         .card {
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .card-header {
             background-color: #007bff; /* Blue header */
             color: #fff; /* White text */
@@ -31,11 +26,9 @@
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
         }
-
         .card-body {
             padding: 20px;
         }
-
         .panel {
             border-radius: 15px;
             background-color: #fff; /* White background */
@@ -43,13 +36,11 @@
             padding: 20px;
             margin-bottom: 20px;
         }
-
         .panel-title {
             font-weight: bold;
             font-size: 20px;
             margin-bottom: 10px;
         }
-
         .statistic-label {
             font-size: 18px;
             margin-bottom: 5px;
@@ -91,15 +82,4 @@
     <!-- Include Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-=======
-!<html>
-    <head>
-        <title>Statistique</title>
-    </head>
-    <body>
-        <%@ include file="navBar.jsp" %>
-        
-        <h1>Hello Statistique</h1>
-    </body>
->>>>>>> Stashed changes
 </html>
