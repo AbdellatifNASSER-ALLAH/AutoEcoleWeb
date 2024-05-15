@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -154,5 +155,15 @@
         <script>
             // Additional JavaScript can be added here
         </script>
+=======
+!<html>
+    <head>
+        <title>Seance</title>
+    </head>
+    <body>
+        <%@ include file="navBar.jsp" %>
+        
+        <h1>Hello Seance</h1>
+>>>>>>> Stashed changes
     </body>
 </html>

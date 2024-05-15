@@ -1,10 +1,11 @@
 !<html>
     <head>
-        <title>Moniteur</title>
+        <title>Voiture</title>
     </head>
     <body>
         <%@ include file="navBar.jsp" %>
         
-        <h1>Hello Moniteur</h1>
+        <h1>Hello Voiture</h1>
     </body>
 </html>
+

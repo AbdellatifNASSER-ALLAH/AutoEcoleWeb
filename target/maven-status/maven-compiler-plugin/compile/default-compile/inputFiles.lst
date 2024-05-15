@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:\Users\Abdellatif\Documents\NetBeansProjects\Auto_Ecole_Web\src\main\java\com\mycompany\auto_ecole_web\Dashboard.java
 C:\Users\Abdellatif\Documents\NetBeansProjects\Auto_Ecole_Web\src\main\java\com\mycompany\auto_ecole_web\auth\Register.java
 C:\Users\Abdellatif\Documents\NetBeansProjects\Auto_Ecole_Web\src\main\java\com\mycompany\auto_ecole_web\auth\Login.java
@@ -7,3 +8,36 @@ C:\Users\Abdellatif\Documents\NetBeansProjects\Auto_Ecole_Web\src\main\java\com\
 C:\Users\Abdellatif\Documents\NetBeansProjects\Auto_Ecole_Web\src\main\java\com\mycompany\auto_ecole_web\JakartaRestConfiguration.java
 C:\Users\Abdellatif\Documents\NetBeansProjects\Auto_Ecole_Web\src\main\java\com\mycompany\auto_ecole_web\model\Candidat.java
 C:\Users\Abdellatif\Documents\NetBeansProjects\Auto_Ecole_Web\src\main\java\com\mycompany\auto_ecole_web\dao\CandidatDao.java
+=======
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\controller\CoursServlet.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\DatabaseConnector.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\FactureDao.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\model\Moniteur.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\ExamenDao.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\ChartDataDao.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\model\Examen.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\JakartaRestConfiguration.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\auth\Register.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\controller\ReservationServlet.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\controller\ChartDataServlet.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\auth\Login.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\controller\CandidatServlet.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\CandidatDao.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\controller\FactureServlet.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\VoitureDao.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\model\Cours.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\CoursDao.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\model\Facture.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\MoniteurDao.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\model\Candidat.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\ReservationDao.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\controller\MoniteurServlet.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\dao\SeanceDao.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\controller\VoitureServlet.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\model\Reservation.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\controller\SeanceServlet.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\model\Voiture.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\resources\JakartaEE10Resource.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\model\Seance.java
+C:\Users\HP\Desktop\J2EE_2\AutoEcoleWeb\src\main\java\com\mycompany\auto_ecole_web\controller\ExamenServlet.java
+>>>>>>> Stashed changes
