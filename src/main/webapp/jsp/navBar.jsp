@@ -22,6 +22,8 @@
                 <!-- Title centered -->
                 <h1 class="navbar-brand mx-auto">HORIZON</h1>
             </div>
+              <a href="client/Logout.jsp" class="btn btn-outline-danger me-2">Logout</a> <!-- Change button to link for logout -->
+           
         </nav>
 
         <div class="d-flex align-items-start">

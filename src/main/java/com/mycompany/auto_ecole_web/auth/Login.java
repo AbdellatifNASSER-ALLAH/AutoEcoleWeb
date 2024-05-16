@@ -1,4 +1,5 @@
 package com.mycompany.auto_ecole_web.auth;
+
 import com.mycompany.auto_ecole_web.dao.CandidatDao;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -20,34 +21,43 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        System.out.println(username);      
-        System.out.println(password);
-
         
-        // Validate username and password (you can check against your database)
-        boolean isValidUser=true;
+        // Validate username and password
+        String userType = "null";
         try {
-            isValidUser = validateUser(username, password);
+            userType = validateUser(username, password);
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        if (isValidUser) {
-            // Redirect to the dashboard page upon successful login
-            response.sendRedirect("jsp/accueil.jsp");
+        if (userType.equals("admin") || userType.equals("candidat")) {
+            // Add user information to session
+            request.getSession().setAttribute("username", username);
+            request.getSession().setAttribute("userType", userType);
+
+            // Redirect to the appropriate page based on user type
+            if (userType.equals("admin")) {
+                response.sendRedirect("jsp/accueil.jsp");
+            } else if (userType.equals("candidat")) {
+                response.sendRedirect("jsp/client/Home.jsp");
+            }
         } else {
             // Redirect back to the login page with an error message
-            request.setAttribute("errorMessage", "Invalid username or password"+"useer : "+username+"pass : "+password+ isValidUser);
+            request.setAttribute("errorMessage", "Invalid username or password. Please try again.");
             request.getRequestDispatcher("jsp/auth/LoginJsp.jsp").forward(request, response);
         }
     }
     
-    // Dummy method for user validation (replace with your actual validation logic)
-    private boolean validateUser(String username, String password) throws SQLException {
-        CandidatDao cnd=new CandidatDao();
-        if(cnd.isSigned(username, password)){
-            return true;
+    // Method to validate user credentials
+    private String validateUser(String username, String password) throws SQLException {
+        CandidatDao cnd = new CandidatDao();
+        String userType = cnd.isSigned(username, password);
+        if (userType.equals("admin")) {
+            return "admin";
+        } else if (userType.equals("candidat")) {
+            return "candidat";
+        } else {
+            return "null";
         }
-        return false;
     }
 }

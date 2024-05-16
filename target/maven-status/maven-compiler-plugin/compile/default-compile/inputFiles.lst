@@ -5,6 +5,7 @@
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/ReservationServlet.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/Dashboard.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/auth/Register.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/UserDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Facture.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/VoitureDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Reservation.java
@@ -13,6 +14,7 @@
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/auth/Login.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/SeanceDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/CoursDao.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/User.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/JakartaRestConfiguration.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/CandidatDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/DatabaseConnector.java

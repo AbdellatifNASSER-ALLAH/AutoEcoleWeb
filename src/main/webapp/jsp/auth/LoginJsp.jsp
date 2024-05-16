@@ -1,4 +1,21 @@
-    <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+<%
+    // Check if the user is already logged in
+   
+    if (session != null && session.getAttribute("username") != null) {
+        String userType = (String) session.getAttribute("userType");
+        // If the user is an admin, redirect to accueil
+        if (userType.equals("admin")) {
+            response.sendRedirect("jsp/accueil.jsp");
+        }
+        // If the user is a candidat, redirect to home
+        else if (userType.equals("candidat")) {
+            response.sendRedirect("jsp/client/Home.jsp");
+        }
+    }
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +24,7 @@
     <title>Login</title>
     <style>
         body {
-            background-color:rgba(11, 10, 20, 0.1) ; 
+            background-color: rgba(11, 10, 20, 0.1);
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             display: flex;
@@ -18,9 +35,9 @@
             width: 100vw;
         }
         .image {
-            margin-top :-10px;
+            margin-top: -10px;
             border-radius: 8px;
-            border-radius: 60px ;
+            border-radius: 60px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 100%;
             height: 150px;
@@ -48,7 +65,6 @@
         }
         input[type="text"],
         input[type="password"] {
-            
             padding: 24px;
             margin: 5px 0;
             border: 1px solid #ccc;
@@ -73,18 +89,15 @@
     </style>
 </head>
 <body>
-   <div class="container">
-           <img src="images/login.jpeg" alt="Your Image" class="image">
-   
+    <div class="container">
+        <img src="images/login.jpeg" alt="Your Image" class="image">
         <h1>Login</h1>
-        
         <form action="login" method="post">
             <input type="text" name="username" placeholder="Username" required><br>
             <input type="password" name="password" placeholder="Password" required><br>
             <button type="submit">Login</button>
-           
         </form>
-       <a href="register">Crée une compte ?</a>
+        <a href="register">Create an account?</a>
         <% if (request.getAttribute("errorMessage") != null) { %>
             <p class="error-message"><%= request.getAttribute("errorMessage") %></p>
         <% } %>
