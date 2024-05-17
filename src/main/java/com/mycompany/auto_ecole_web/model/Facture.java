@@ -18,7 +18,14 @@ public class Facture {
     private String modePaiement;
 
     // Constructeur
-    public Facture(int parseInt, double montant, Date datePaiement, String modePaiement1) {
+    public Facture(int eleveId, double montant, Date datePaiement, String modePaiement1) {
+        this.id = id;
+        this.eleveId = eleveId;
+        this.montant = montant;
+        this.datePaiement = datePaiement;
+        this.modePaiement = modePaiement;
+    }
+      public Facture(int id,int eleveId, double montant, Date datePaiement, String modePaiement1) {
         this.id = id;
         this.eleveId = eleveId;
         this.montant = montant;

@@ -44,6 +44,37 @@ public class FactureDao {
         return paiements;
     }
 
+    public Facture getById(int factureId) throws SQLException {
+    String query = "SELECT * FROM facturepaiement WHERE id = ?";
+    try (PreparedStatement statement = connection.prepareStatement(query)) {
+        statement.setInt(1, factureId);
+        try (ResultSet resultSet = statement.executeQuery()) {
+            if (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                int eleveId = resultSet.getInt("eleve_id");
+                double montant = resultSet.getDouble("montant");
+                java.util.Date datePaiement = resultSet.getDate("date_paiement");
+                String modePaiement = resultSet.getString("mode_paiement");
+                return new Facture(id, eleveId, montant, datePaiement, modePaiement); // Retourner un objet Facture avec les détails récupérés
+            }
+        }
+    }
+    return null; // Retourner null si aucune facture n'est trouvée avec cet ID
+}
+    
+    public void update(Facture facture) throws SQLException {
+    String query = "UPDATE FacturePaiement SET eleve_id = ?, montant = ?, date_paiement = ?, mode_paiement = ? WHERE id = ?";
+    try (PreparedStatement statement = connection.prepareStatement(query)) {
+        statement.setInt(1, facture.getEleveId());
+        statement.setDouble(2, facture.getMontant());
+        statement.setDate(3, (java.sql.Date) facture.getDatePaiement());
+        statement.setString(4, facture.getModePaiement());
+        statement.setInt(5, facture.getId());
+        statement.executeUpdate();
+    }
+}
+
+
     // Méthode pour enregistrer un nouveau paiement
     public void save(Facture paiement) throws SQLException {
         String query = "INSERT INTO FacturePaiement (eleve_id,montant, date_paiement, mode_paiement) VALUES (?, ?, ?, ?)";

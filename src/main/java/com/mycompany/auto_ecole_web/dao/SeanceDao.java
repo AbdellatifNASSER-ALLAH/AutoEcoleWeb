@@ -52,6 +52,27 @@ public class SeanceDao {
             statement.executeUpdate();
         }
     }
+        public Seance getById(int id) throws SQLException {
+        Seance seance = null;
+        String query = "SELECT * FROM planningseances WHERE id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, id);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    // Construire l'objet Moniteur à partir des données récupérées
+                    seance = new Seance();
+
+                    seance.setId(resultSet.getInt("id"));
+                    seance.setCoursId(resultSet.getInt("cours_id"));
+                     seance.setDateSeance(resultSet.getDate("date_sceance"));
+                    seance.setHeureDebut(resultSet.getString("heure_debut"));
+                    seance.setHeureFin(resultSet.getString("heure_fin"));
+                    
+                }
+            }
+        }
+        return seance;
+    }
 
     // Méthode pour mettre à jour une séance existante
     public void update(Seance seance) throws SQLException {

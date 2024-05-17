@@ -14,10 +14,12 @@
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/auth/Login.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/SeanceDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/CoursDao.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/CandidatDel.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/User.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/JakartaRestConfiguration.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/CandidatDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/DatabaseConnector.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/StatistiquesServlet.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/ReservationDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/ExamenServlet.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Examen.java
@@ -30,5 +32,6 @@
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Candidat.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Moniteur.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/resources/JakartaEE10Resource.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/CandidatEdit.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/SeanceServlet.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Seance.java

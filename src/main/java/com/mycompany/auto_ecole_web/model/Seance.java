@@ -66,6 +66,7 @@ public class Seance {
     public void setHeureDebut(String heureDebut) {
         this.heureDebut = heureDebut;
     }
+    
 
     public String getHeureFin() {
         return heureFin;

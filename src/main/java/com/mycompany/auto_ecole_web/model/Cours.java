@@ -18,7 +18,9 @@ public class Cours {
     private String heureDebut;
     private String heureFin;
     private int vehiculeId;
-    
+    public Cours(){
+        
+    }
     public Cours(String titre, Date dateDebut, Date dateFin, String heureDebut, String heureFin, int vehiculeId) {
         this.titre = titre;
         this.dateDebut = dateDebut;

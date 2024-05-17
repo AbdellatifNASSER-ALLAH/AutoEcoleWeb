@@ -68,7 +68,7 @@ public class ReservationDao {
     }
 
      // Méthode pour récupérer une réservation par son ID
-    public Reservation getReservationById(int reservationId) throws SQLException {
+    public Reservation getById(int reservationId) throws SQLException {
         String query = "SELECT * FROM reservation WHERE id = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, reservationId);

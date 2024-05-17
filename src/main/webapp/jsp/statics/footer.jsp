@@ -1,6 +1,5 @@
-
 <!-- Footer -->
-<footer class=" bg-dark text-light text-center py-4">
+<footer class="footer bg-dark text-light text-center py-4">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -28,7 +27,3 @@
         </div>
     </div>
 </footer>
-
-
-
-

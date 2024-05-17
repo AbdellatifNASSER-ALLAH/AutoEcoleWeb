@@ -1,95 +1,112 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package com.mycompany.auto_ecole_web.controller;
+import com.mycompany.auto_ecole_web.dao.CandidatDao;
+import com.mycompany.auto_ecole_web.model.Candidat;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-/**
- *
- * @author Abdellatif
- */
-@WebServlet( "/CandidatServlet" )
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.RequestDispatcher;
+
+@WebServlet("/candidat")
 public class CandidatServlet extends HttpServlet {
 
-    @Override
-    public void init() throws ServletException {
-        super.init();
-    }
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request  servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet CandidatServlet</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet CandidatServlet     at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the
-    // + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request  servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.sendRedirect("/test.jsp");
-        // processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request  servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
-     */
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("/test.jsp");
-        // processRequest(request, response);
+        // Récupérer les données du formulaire
+        String nom = request.getParameter("nom");
+        String prenom = request.getParameter("prenom");
+        String adresse = request.getParameter("adresse");
+        String telephone = request.getParameter("telephone");
+
+        // Créer un nouvel objet Candidat avec les données reçues
+        Candidat candidat = new Candidat(nom, prenom, adresse, telephone);
+
+        // Enregistrer le candidat dans la base de données
+        try {
+            CandidatDao candidatDao = new CandidatDao();
+            candidatDao.save(candidat);
+        } catch (SQLException ex) {
+            Logger.getLogger(CandidatServlet.class.getName()).log(Level.SEVERE, "Erreur lors de l'enregistrement du candidat", ex);
+            throw new ServletException("Erreur lors de l'enregistrement du candidat", ex);
+        }
+
+        // Rediriger vers la page affichant la liste des candidats
+        response.sendRedirect(request.getContextPath() + "/candidat");
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+   protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String idDel = request.getParameter("id_del");
+        if (idDel != null && !idDel.isEmpty()) {
+            try {
+                int id = Integer.parseInt(idDel);
+                CandidatDao candidatDao = new CandidatDao();
+                candidatDao.delete(id);
+                response.sendRedirect(request.getContextPath() + "/candidat");
+                return;
+            } catch (NumberFormatException | SQLException ex) {
+                Logger.getLogger(CandidatServlet.class.getName()).log(Level.SEVERE, "Erreur lors de la suppression du candidat", ex);
+                throw new ServletException("Erreur lors de la suppression du candidat", ex);
+            }
+        }
+        Candidat cnd = null;
+         String idEdt = request.getParameter("id_edt");
+        if (idEdt != null && !idEdt.isEmpty()) {
+            try {
+                int id = Integer.parseInt(idEdt);
+                CandidatDao candidatDao = new CandidatDao();
+                cnd=candidatDao.getUserById(id);
+              
+            } catch (NumberFormatException | SQLException ex) {
+                Logger.getLogger(CandidatServlet.class.getName()).log(Level.SEVERE, "Erreur lors de la suppression du candidat", ex);
+                throw new ServletException("Erreur lors de la suppression du candidat", ex);
+            }
+        }
+        
+        
+         String idEdt1 = request.getParameter("id_edt1");
+        if (idEdt != null && !idEdt.isEmpty()) {
+            
+            
+             String nom = request.getParameter("nom");
+        String prenom = request.getParameter("prenom");
+        String adresse = request.getParameter("adresse");
+        String telephone = request.getParameter("telephone");
 
+   
+            try {
+                int id = Integer.parseInt(idEdt1);
+                 // Créer un nouvel objet Candidat avec les données reçues
+        Candidat candidat = new Candidat(id,nom, prenom, adresse, telephone);
+                CandidatDao candidatDao = new CandidatDao();
+                candidatDao.update(candidat);
+              
+            } catch (NumberFormatException | SQLException ex) {
+                Logger.getLogger(CandidatServlet.class.getName()).log(Level.SEVERE, "Erreur lors de la suppression du candidat", ex);
+                throw new ServletException("Erreur lors de la suppression du candidat", ex);
+            }
+        }
+
+        try {
+            CandidatDao candidatDao = new CandidatDao();
+            List<Candidat> listeCandidats = candidatDao.getAll();
+            request.setAttribute("listeCandidats", listeCandidats);
+            request.setAttribute("edtCandidat", cnd);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(CandidatServlet.class.getName()).log(Level.SEVERE, "Erreur lors de la récupération de la liste des candidats", ex);
+            throw new ServletException("Erreur lors de la récupération de la liste des candidats", ex);
+        }
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/candidat.jsp");
+        dispatcher.forward(request, response);
+    }
 }

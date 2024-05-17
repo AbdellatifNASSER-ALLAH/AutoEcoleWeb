@@ -6,138 +6,58 @@
         <title>Document</title>
         <link rel="stylesheet" href="../css/style.css"/>
         <!-- Bootstrap CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous" />
+        
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <!-- Logo on the left -->
-                <div class="navbar-brand">
-                    <img src="../images/horizon.png" width="90px" alt="Logo">
-                </div>
-                <!-- Title centered -->
-                <h1 class="navbar-brand mx-auto">HORIZON</h1>
-            </div>
-              <a href="client/Logout.jsp" class="btn btn-outline-danger me-2">Logout</a> <!-- Change button to link for logout -->
-           
-        </nav>
+        <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid d-flex align-items-center justiy-content-center">
+        <a class="navbar-brand" href="#"><img  width="100px" height="60px" src="http://localhost:8086/AutoEcole/images/horizon.png" alt="alt"/></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex align-items-center justiy-content-center w-100 collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto  mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/jsp/accueil.jsp">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/candidat">Candidat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/moniteur">Moniteur</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/seance">Séance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/cours">Cours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/examen">Examen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/reservation">Réservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/facture">Facture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/vehicule">Véhicule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/statistique">Statistique</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+            
+            <a href="Logout.jsp" class="btn btn-outline-danger me-2">Logout</a> <!-- Change button to link for logout -->
+        </div>
+        </div>
+    </div>
+</nav>
 
-        <div class="d-flex align-items-start">
-            <div
-                class="nav flex-column nav-pills me-3"
-                id="v-pills-tab"
-                role="tablist"
-                aria-orientation="vertical">
-                <a
-                    class="nav-link active"
-                    id="v-pills-accueil-tab"
-                    data-bs-toggle="pill"
-                    href="#v-pills-accueil"
-                    role="tab"
-                    aria-controls="v-pills-accueil"
-                    aria-selected="true"
-                    >Accueil</a
-                >
-                <a
-                    class="nav-link"
-                    id="v-pills-candidat-tab"
-                    data-bs-toggle="pill"
-                    
-                    href="#v-pills-candidat"
-                    role="tab"
-                    aria-controls="v-pills-candidat"
-                    aria-selected="false"
-                    >Gestion Candidat</a
-                >
-                <a
-                     href="#v-pills-vehicule"
-                    class="nav-link"
-                    id="v-pills-vehicule-tab"
-                    data-bs-toggle="pill"
-                    role="tab"
-                    aria-controls="v-pills-vehicule"
-                    aria-selected="false"
-                    >Gestion Véhicule</a
-                >
-                <a
-                    class="nav-link"
-                    id="v-pills-moniteur-tab"
-                    data-bs-toggle="pill"
-                     href="#v-pills-moniteur"
-                    role="tab"
-                    aria-controls="v-pills-moniteur"
-                    aria-selected="false"
-                    >Gestion Moniteur</a
-                >
-                <a
-                    class="nav-link"
-                    id="v-pills-seance-tab"
-                    data-bs-toggle="pill"
-                    href="#v-pills-seance"
-                    role="tab"
-                    aria-controls="v-pills-seance"
-                    aria-selected="false"
-                    >Gestion Seance</a
-                >
-                <a
-                    class="nav-link"
-                    id="v-pills-cours-tab"
-                    data-bs-toggle="pill"
-                    href="#v-pills-cours"
-                    role="tab"
-                    aria-controls="v-pills-cours"
-                    aria-selected="false"
-                    >Gestion Cours</a
-                >
-                <a
-                    class="nav-link"
-                    id="v-pills-examen-tab"
-                    data-bs-toggle="pill"
-                     href="#v-pills-examen"
-                    role="tab"
-                    aria-controls="v-pills-examen"
-                    aria-selected="false"
-                    >Gestion Examen</a
-                >
-                <a
-                    class="nav-link"
-                    id="v-pills-facteure-tab"
-                    data-bs-toggle="pill"
-                     href="#v-pills-facteure"
-                    role="tab"
-                    aria-controls="v-pills-facteure"
-                    aria-selected="false"
-                    >Gestion Facture</a
-                >
-                <a
-                    class="nav-link"
-                    id="v-pills-reservation-tab"
-                    data-bs-toggle="pill"
-                    href="#v-pills-reservation"
-                    role="tab"
-                    aria-controls="v-pills-reservation"
-                    aria-selected="false"
-                    >Gestion Reservation</a
-                >
-                <a
-                    class="nav-link"
-                    id="v-pills-statistique-tab"
-                    data-bs-toggle="pill"
-                     href="#v-pills-statistique"
-                    role="tab"
-                    aria-controls="v-pills-statistique"
-                    aria-selected="false"
-                    >Statistique</a
-                >
-            </div>
             <!-- Bootstrap JS (Optional) -->
-            <script
-                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+           
     </body>
 </html>

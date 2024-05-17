@@ -5,6 +5,7 @@
 package com.mycompany.auto_ecole_web.dao;
 
 import com.mycompany.auto_ecole_web.model.Cours;
+import com.mycompany.auto_ecole_web.model.Moniteur;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -91,6 +92,31 @@ public class CoursDao {
             st.setInt(7, cours.getId());
             st.executeUpdate();
         }
+    }
+    
+        public Cours getById(int id) throws SQLException {
+        Cours cours = null;
+        String query = "SELECT * FROM Cours WHERE id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, id);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    // Construire l'objet Moniteur à partir des données récupérées
+     
+                    cours = new Cours();
+                    cours.setId(resultSet.getInt("id"));
+                    cours.setTitre(resultSet.getString("titre"));
+                    cours.setDateDebut(resultSet.getDate("date_debut"));
+                    cours.setDateFin(resultSet.getDate("date_fin"));      
+                    cours.setHeureFin(resultSet.getString("heure_fin"));
+                    cours.setHeureDebut(resultSet.getString("heure_debut"));
+                    cours.setVehiculeId(resultSet.getInt("vehicule_id"));
+
+                    
+                }
+            }
+        }
+        return cours;
     }
 
     // Méthode pour supprimer un cours par ID

@@ -56,6 +56,8 @@ public class ExamenDao {
             statement.executeUpdate();
         }
     }
+    
+    
 
     // Méthode pour mettre à jour un examen existant
     public void update(Examen examen) throws SQLException {
@@ -114,7 +116,7 @@ public class ExamenDao {
 
 
     // Méthode pour trouver un examen par son ID
-    public Examen find(int id) throws SQLException {
+    public Examen getById(int id) throws SQLException {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         Examen exam = null;
