@@ -18,6 +18,8 @@ import jakarta.servlet.RequestDispatcher;
 @WebServlet("/candidat")
 public class CandidatServlet extends HttpServlet {
 
+        private static final Logger LOGGER = Logger.getLogger(CandidatServlet.class.getName());
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Récupérer les données du formulaire
@@ -57,23 +59,40 @@ public class CandidatServlet extends HttpServlet {
                 throw new ServletException("Erreur lors de la suppression du candidat", ex);
             }
         }
-        Candidat cnd = null;
          String idEdt = request.getParameter("id_edt");
-        if (idEdt != null && !idEdt.isEmpty()) {
-            try {
-                int id = Integer.parseInt(idEdt);
-                CandidatDao candidatDao = new CandidatDao();
-                cnd=candidatDao.getUserById(id);
-              
-            } catch (NumberFormatException | SQLException ex) {
-                Logger.getLogger(CandidatServlet.class.getName()).log(Level.SEVERE, "Erreur lors de la suppression du candidat", ex);
-                throw new ServletException("Erreur lors de la suppression du candidat", ex);
+         System.out.println(idEdt);
+         Candidat cnd=null;
+        try {
+             CandidatDao candidatDao = new CandidatDao();
+            // Always fetch all candidats
+            List<Candidat> listeCandidats = candidatDao.getAll();
+            request.setAttribute("listeCandidats", listeCandidats);
+
+            // If id_edt is provided and valid, fetch specific candidat
+            if (idEdt != null && !idEdt.isEmpty()) {
+                try {
+                    int id = Integer.parseInt(idEdt);
+                    cnd = candidatDao.getUserById(id);
+            request.setAttribute("listeCandidats", listeCandidats);
+            request.setAttribute("edtCandidat", cnd);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/candidat.jsp");
+        dispatcher.forward(request, response);
+                } catch (NumberFormatException ex) {
+                }
             }
+
+      
+
+            // Forward to JSP
+           
+
+        } catch (SQLException ex) {
+            throw new ServletException("Erreur lors de la récupération des candidats", ex);
         }
         
         
          String idEdt1 = request.getParameter("id_edt1");
-        if (idEdt != null && !idEdt.isEmpty()) {
+        if (idEdt1 != null && !idEdt1.isEmpty()) {
             
             
              String nom = request.getParameter("nom");

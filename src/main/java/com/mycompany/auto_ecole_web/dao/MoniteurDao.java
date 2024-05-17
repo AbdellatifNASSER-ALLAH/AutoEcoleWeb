@@ -158,6 +158,8 @@ public void delete(int moniteurId) throws SQLException {
                     moniteur.setId(resultSet.getInt("id"));
                     moniteur.setNom(resultSet.getString("nom"));
                     moniteur.setPrenom(resultSet.getString("prenom"));
+                    moniteur.setAdresse(resultSet.getString("adresse"));
+                    moniteur.setTelephone(resultSet.getString("telephone"));
                     
                 }
             }

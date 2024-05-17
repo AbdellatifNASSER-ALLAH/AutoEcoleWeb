@@ -47,7 +47,7 @@
                 <div class="mb-3">
                     <label for="telephone" class="form-label">Téléphone </label>
                     <input type="text" name="telephone" id="telephone" class="form-control" value="${edtMoniteur.getTelephone()}">
-                    <input type="hidden" name="id" value="${edtMoniteur.id}">
+                    <input type="hidden" name="id_edt1" value="${edtMoniteur.id}">
                 </div>
                 <button type="submit" class="btn btn-primary">Modifier</button>
             </form>

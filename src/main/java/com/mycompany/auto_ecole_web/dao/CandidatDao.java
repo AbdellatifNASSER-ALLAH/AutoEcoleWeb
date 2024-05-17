@@ -158,12 +158,22 @@ public void update(Candidat user) throws SQLException {
 
 // Method to delete a user by ID
 public void delete(int userId) throws SQLException {
-    String query = "DELETE FROM Eleve WHERE id = ?";
-    try (PreparedStatement statement = connection.prepareStatement(query)) {
-        statement.setInt(1, userId);
-        statement.executeUpdate();
+    String deleteReservationsQuery = "DELETE FROM reservation WHERE eleve_id = ?";
+    String deleteEleveQuery = "DELETE FROM Eleve WHERE id = ?";
+
+    try (PreparedStatement deleteReservationsStatement = connection.prepareStatement(deleteReservationsQuery);
+         PreparedStatement deleteEleveStatement = connection.prepareStatement(deleteEleveQuery)) {
+
+        // Delete related records in the reservation table
+        deleteReservationsStatement.setInt(1, userId);
+        deleteReservationsStatement.executeUpdate();
+
+        // Delete the eleve record
+        deleteEleveStatement.setInt(1, userId);
+        deleteEleveStatement.executeUpdate();
     }
 }
+
      public int getNombreUser() {
         int nbr = 0;
         String query = "SELECT count(*) as count FROM Eleve"; // Utilisation de l'alias "count" pour obtenir le résultat

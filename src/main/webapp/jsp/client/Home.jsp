@@ -37,35 +37,37 @@
 </head>
 <body>
     
-    
-     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img  width="100px" height="60px" src="../../images/horizon.png" alt="alt"/></a>
+            <a class="navbar-brand" href="#"><img  width="100px" height="60px" src="http://localhost:8086/AutoEcole/images/horizon.png" alt="alt"/></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!--
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>--->
+                        <a class="nav-link" href="http://localhost:8086/AutoEcole/jsp/client/Home.jsp">Accueil</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/inscription">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/reservationUser">Réservation du cours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/jsp/client/resultat.jsp">Consulter resultat</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8086/AutoEcole/jsp/client/settings.jsp">Modifier votre compte</a>
+                </li>
                 </ul>
                 <div class="d-flex">
-                <% 
-                    // Récupérer le nom de l'utilisateur depuis la session
-                    String username = (String) session.getAttribute("username");
-                    if(username != null) {
-                %>
-                <span class="me-3">Welcome, <%= username %></span> <!-- Afficher le nom de l'utilisateur -->
-                <% } %>
+
                 <a href="Logout.jsp" class="btn btn-outline-danger me-2">Logout</a> <!-- Change button to link for logout -->
             </div>
             </div>
         </div>
     </nav>
-
     <!-- Main Content -->
     <div class="container">
         <div class="row">
@@ -78,14 +80,8 @@
                                 <i class="fas fa-user-plus feature-icon"></i>
                                 <h5 class="card-title">Inscription</h5>
                                 <p class="feature-description">Inscrivez-vous pour commencer votre formation.</p>
-                                <button id="inscriptionBtn" class="btn btn-primary">S'inscrire</button>
-                                <div id="inscriptionForm" class="hidden">
-                                    <form action="inscription.jsp">
-                                        <!-- Vos champs de formulaire ici -->
-                                        
-                                        <button type="submit" class="btn btn-success mt-3">Valider</button>
-                                    </form>
-                                </div>
+                                <a href="http://localhost:8086/AutoEcole/inscription" id="inscriptionBtn" class="btn btn-primary">S'inscrire</a>
+                               
                             </div>
                         </div>
                     </div>
@@ -96,13 +92,8 @@
                                 <i class="far fa-calendar-alt feature-icon"></i>
                                 <h5 class="card-title">Réservation de cours</h5>
                                 <p class="feature-description">Réservez vos cours de conduite en ligne.</p>
-                                <button id="reservationBtn" class="btn btn-primary">Réserver</button>
-                                <div id="reservationForm" class="hidden">
-                                    <form action="reservation.jsp">
-                                        <!-- Vos champs de formulaire ici -->
-                                        <button type="submit" class="btn btn-success mt-3">Valider</button>
-                                    </form>
-                                </div>
+                                <a href="http://localhost:8086/AutoEcole/reservationUser" id="reservationBtn" class="btn btn-primary">Réserver</a>
+                               
                             </div>
                         </div>
                     </div>
@@ -113,16 +104,11 @@
                                 <i class="fas fa-poll feature-icon"></i>
                                 <h5 class="card-title">Consulter vos résultats</h5>
                                 <p class="feature-description">Consultez vos résultats d'examens enregistrés.</p>
-                                <button id="resultatsBtn" class="btn btn-primary">Voir les résultats</button>
-                                <div id="resultatsForm" class="hidden">
-                                    <form action="resultats.jsp">
-                                        <!-- Vos champs de formulaire ici -->
-                                        <button type="submit" class="btn btn-success mt-3">Valider</button>
-                                    </form>
-                                </div>
-                            </div>
+                                <a href="http://localhost:8086/AutoEcole/jsp/client/resultat.jsp" id="resultatsBtn" class="btn btn-primary">Voir les résultats</a>
+                              
                         </div>
                     </div>
+                        </div>
                     <!-- Modifier votre compte -->
                     <div class="col">
                         <div class="card text-center">
@@ -130,13 +116,8 @@
                                 <i class="fas fa-user-edit feature-icon"></i>
                                 <h5 class="card-title">Modifier votre compte</h5>
                                 <p class="feature-description">Modifiez vos informations personnelles.</p>
-                                <button id="modifierBtn" class="btn btn-primary">Modifier</button>
-                                <div id="modifierForm" class="hidden">
-                                    <form action="modifier_compte.jsp">
-                                        <!-- Vos champs de formulaire ici -->
-                                        <button type="submit" class="btn btn-success mt-3">Valider</button>
-                                    </form>
-                                </div>
+                                   <a href="http://localhost:8086/AutoEcole/jsp/client/settings.jsp" id="resultatsBtn" class="btn btn-primary">Modifier</a>
+                                
                             </div>
                         </div>
                     </div>

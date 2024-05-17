@@ -30,11 +30,21 @@ public class MoniteurServlet extends HttpServlet {
 
         // Créer un nouvel objet Candidat avec les données reçues
          Moniteur moniteur = new  Moniteur(nom, prenom, adresse, telephone);
-
+          String idEdt1 = request.getParameter("id_edt1");
         // Enregistrer le candidat dans la base de données
         try {
-            MoniteurDao  moniteurDao = new  MoniteurDao();
-             moniteurDao.save(moniteur);
+            if (idEdt1 != null && !idEdt1.isEmpty()) {
+            int id = Integer.parseInt(idEdt1);
+                 // Créer un nouvel objet Candidat avec les données reçues
+               moniteur = new Moniteur(id,nom, prenom, adresse, telephone);
+                MoniteurDao moniteurDao = new MoniteurDao();
+               moniteurDao.update(moniteur);
+              
+            }else{
+                MoniteurDao  moniteurDao = new  MoniteurDao();
+             moniteurDao.save(moniteur); 
+            }
+           
         } catch (SQLException ex) {
             Logger.getLogger( MoniteurServlet.class.getName()).log(Level.SEVERE, "Erreur lors de l'enregistrement du candidat", ex);
             throw new ServletException("Erreur lors de l'enregistrement du candidat", ex);
@@ -73,27 +83,7 @@ public class MoniteurServlet extends HttpServlet {
             }
         }
         
-         String idEdt1 = request.getParameter("id_edt1");
-        if (idEdt != null && !idEdt.isEmpty()) {
-            
-            
-             String nom = request.getParameter("nom");
-        String prenom = request.getParameter("prenom");
-        String adresse = request.getParameter("adresse");
-        String telephone = request.getParameter("telephone");
-        
-         try {
-                int id = Integer.parseInt(idEdt1);
-                 // Créer un nouvel objet Candidat avec les données reçues
-        Moniteur moniteur = new Moniteur(id,nom, prenom, adresse, telephone);
-                MoniteurDao moniteurDao = new MoniteurDao();
-               moniteurDao.update(moniteur);
-              
-            } catch (NumberFormatException | SQLException ex) {
-                Logger.getLogger(CandidatServlet.class.getName()).log(Level.SEVERE, "Erreur lors de la suppression du candidat", ex);
-                throw new ServletException("Erreur lors de la suppression du candidat", ex);
-            }
-        }
+
 
         try {
              MoniteurDao  moniteurDao = new  MoniteurDao();

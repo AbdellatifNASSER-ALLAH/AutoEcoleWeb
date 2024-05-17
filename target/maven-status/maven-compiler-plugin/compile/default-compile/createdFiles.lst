@@ -13,7 +13,10 @@ com/mycompany/auto_ecole_web/dao/MoniteurDao.class
 com/mycompany/auto_ecole_web/controller/CandidatEdit.class
 com/mycompany/auto_ecole_web/dao/FactureDao.class
 com/mycompany/auto_ecole_web/controller/ExamenServlet.class
+com/mycompany/auto_ecole_web/controller/user/ReservationCours.class
+com/mycompany/auto_ecole_web/controller/user/Inscription.class
 com/mycompany/auto_ecole_web/dao/VoitureDao.class
+com/mycompany/auto_ecole_web/controller/user/EditCompte.class
 com/mycompany/auto_ecole_web/model/User.class
 com/mycompany/auto_ecole_web/dao/ExamenDao.class
 com/mycompany/auto_ecole_web/dao/ReservationDao.class
@@ -28,6 +31,7 @@ com/mycompany/auto_ecole_web/dao/SeanceDao.class
 com/mycompany/auto_ecole_web/resources/JakartaEE10Resource.class
 com/mycompany/auto_ecole_web/model/Reservation.class
 com/mycompany/auto_ecole_web/controller/VoitureServlet.class
+com/mycompany/auto_ecole_web/controller/user/Resultats.class
 com/mycompany/auto_ecole_web/auth/Register.class
 com/mycompany/auto_ecole_web/dao/ChartDataDao.class
 com/mycompany/auto_ecole_web/controller/CandidatServlet.class

@@ -10,6 +10,7 @@
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/VoitureDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Reservation.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/MoniteurDao.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/user/Inscription.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/ChartDataDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/auth/Login.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/SeanceDao.java
@@ -25,10 +26,13 @@
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Examen.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/CoursServlet.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Cours.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/user/Resultats.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/MoniteurServlet.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/dao/FactureDao.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/VoitureServlet.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/user/ReservationCours.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Voiture.java
+/Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/controller/user/EditCompte.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Candidat.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/model/Moniteur.java
 /Users/air/Desktop/java/web/AutoEcoleWeb/src/main/java/com/mycompany/auto_ecole_web/resources/JakartaEE10Resource.java

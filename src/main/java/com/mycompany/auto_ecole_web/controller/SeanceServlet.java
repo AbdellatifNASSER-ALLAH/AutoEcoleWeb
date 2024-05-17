@@ -25,6 +25,8 @@ public class SeanceServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String idDel = request.getParameter("id_del");
+    
+        
         String idEdt = request.getParameter("id_edt");
 
         try {
@@ -38,7 +40,12 @@ public class SeanceServlet extends HttpServlet {
             } else if (idEdt != null && !idEdt.isEmpty()) {
                 int id = Integer.parseInt(idEdt);
                 Seance edtSeance = seanceDao.getById(id);
+                   List<Seance> listeSeances = seanceDao.getAll();
+            request.setAttribute("listeSeances", listeSeances);
                 request.setAttribute("edtSeance", edtSeance);
+                   RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/seance.jsp");
+        dispatcher.forward(request, response);
+                
             }
 
             List<Seance> listeSeances = seanceDao.getAll();
@@ -71,6 +78,9 @@ public class SeanceServlet extends HttpServlet {
             Seance seance = new Seance(coursId, dateS, heureDebut, heureFin);
 
             if (id != null && !id.isEmpty()) {
+                  int a  = Integer.parseInt(id);
+                  seance = new Seance(a,coursId, dateS, heureDebut, heureFin);
+
                 seance.setId(Integer.parseInt(id));
                 seanceDao.update(seance);
             } else {

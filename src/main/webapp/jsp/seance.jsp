@@ -7,12 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gestion des Séances</title>
         <!-- Include Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Include FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Include FontAwesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Include Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Include Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
             /* Custom CSS for session management page */
             body {
@@ -65,118 +65,121 @@
         </style>
     </head>
     <body>
-          <%@ include file="navBar.jsp" %>
-    <div class="container">
-        <h1 class="mt-5 text-center">Gestion des Séances</h1>
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <!-- Form to add or edit a session -->
-                <div class="card">
-                    <div class="card-header">
-                        <c:choose>
-                            <c:when test="${not empty edtSeance}">
-                                Modifier une Séance
-                            </c:when>
-                            <c:otherwise>
-                                Ajouter une Séance
-                            </c:otherwise>
-                        </c:choose>
-                    </div>
-                    <div class="card-body">
-                        <c:choose>
-                            <c:when test="${not empty edtSeance}">
-                                <form action="${pageContext.request.contextPath}/seance" method="post">
-                                    <div class="mb-3">
-                                        <label for="coursId" class="form-label">Cours ID</label>
-                                        <input type="number" name="coursId" id="coursId" class="form-control" value="${edtSeance.getCoursId()}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="dateSeance" class="form-label">Date de la Séance</label>
-                                        <input type="date" name="dateSeance" id="dateSeance" class="form-control" value="${edtSeance.getDateSeance()}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="heureDebut" class="form-label">Heure de Début</label>
-                                        <input type="time" name="heureDebut" id="heureDebut" class="form-control" value="${edtSeance.getHeureDebut()}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="heureFin" class="form-label">Heure de Fin</label>
-                                        <input type="time" name="heureFin" id="heureFin" class="form-control" value="${edtSeance.getHeureFin()}">
-                                        <input type="hidden" name="id" value="${edtSeance.getId()}">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Modifier</button>
-                                </form>
-                            </c:when>
-                            <c:otherwise>
-                                <form action="${pageContext.request.contextPath}/seance" method="post">
-                                    <div class="mb-3">
-                                        <label for="coursId" class="form-label">Cours ID</label>
-                                        <input type="number" name="coursId" id="coursId" class="form-control">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="dateSeance" class="form-label">Date de la Séance</label>
-                                        <input type="date" name="dateSeance" id="dateSeance" class="form-control">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="heureDebut" class="form-label">Heure de Début</label>
-                                        <input type="time" name="heureDebut" id="heureDebut" class="form-control">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="heureFin" class="form-label">Heure de Fin</label>
-                                        <input type="time" name="heureFin" id="heureFin" class="form-control">
-                                    </div>
-                                    <button type="submit" class="btn btn-success">Ajouter</button>
-                                </form>
-                            </c:otherwise>
-                        </c:choose>
+        <%@ include file="navBar.jsp" %>
+        <div class="container">
+            <h1 class="mt-5 text-center">Gestion des Séances</h1>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <!-- Form to add or edit a session -->
+                    <div class="card">
+                        <div class="card-header">
+                            <c:choose>
+                                <c:when test="${not empty edtSeance}">
+                                    Modifier une Séance
+                                </c:when>
+                                <c:otherwise>
+                                    Ajouter une Séance
+                                </c:otherwise>
+                            </c:choose>
+                        </div>
+                        <div class="card-body">
+                            <c:choose>
+                                <c:when test="${not empty edtSeance}">
+                                    <form action="${pageContext.request.contextPath}/seance" method="post">
+                                        <div class="mb-3">
+                                            <label for="coursId" class="form-label">Cours ID</label>
+                                            <input type="number" name="coursId" id="coursId" class="form-control" value="${edtSeance.getCoursId()}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="dateSeance" class="form-label">Date de la Séance</label>
+                                            <input type="date" name="dateSeance" id="dateSeance" class="form-control" value="${edtSeance.getDateSeance()}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="heureDebut" class="form-label">Heure de Début</label>
+                                            <input type="time" name="heureDebut" id="heureDebut" class="form-control" value="${edtSeance.getHeureDebut()}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="heureFin" class="form-label">Heure de Fin</label>
+                                            <input type="time" name="heureFin" id="heureFin" class="form-control" value="${edtSeance.getHeureFin()}">
+                                            <input type="hidden" name="id" value="${edtSeance.getId()}">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Modifier</button>
+                                    </form>
+                                </c:when>
+                                <c:otherwise>
+                                    <form action="${pageContext.request.contextPath}/seance" method="post">
+                                        <div class="mb-3">
+                                            <label for="coursId" class="form-label">Cours ID</label>
+                                            <input type="number" name="coursId" id="coursId" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="dateSeance" class="form-label">Date de la Séance</label>
+                                            <input type="date" name="dateSeance" id="dateSeance" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="heureDebut" class="form-label">Heure de Début</label>
+                                            <input type="time" name="heureDebut" id="heureDebut" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="heureFin" class="form-label">Heure de Fin</label>
+                                            <input type="time" name="heureFin" id="heureFin" class="form-control">
+                                        </div>
+                                        <button type="submit" class="btn btn-success">Ajouter</button>
+                                    </form>
+                                </c:otherwise>
+                            </c:choose>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <!-- Table to display sessions -->
-                <div class="card">
-                    <div class="card-header">
-                        Liste des Séances
-                    </div>
-                    <div class="card-body">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Cours ID</th>
-                                    <th>Date</th>
-                                    <th>Heure de Début</th>
-                                    <th>Heure de Fin</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <c:if test="${empty listeSeances}">
+                <div class="col-md-6">
+                    <!-- Table to display sessions -->
+                    <div class="card">
+                        <div class="card-header">
+                            Liste des Séances
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
                                     <tr>
-                                        <td colspan="6" class="text-center">Aucune séance trouvée.</td>
+                                        <th>ID</th>
+                                        <th>Cours ID</th>
+                                        <th>Date</th>
+                                        <th>Heure de Début</th>
+                                        <th>Heure de Fin</th>
+                                        <th>Modify</th>
+                                        <th>Delete</th>
                                     </tr>
-                                </c:if>
-                                <c:forEach var="seance" items="${listeSeances}">
-                                    <tr>
-                                        <td>${seance.getId()}</td>
-                                        <td>${seance.getCoursId()}</td>
-                                        <td>${seance.getDateSeance()}</td>
-                                        <td>${seance.getHeureDebut()}</td>
-                                        <td>${seance.getHeureFin()}</td>
-                                        <td>
-                                            <a href="${pageContext.request.contextPath}/seance?id_edt=${seance.getId()}"><i class="fa fa-edit"></i></a>
-                                            <a href="${pageContext.request.contextPath}/seance?id_del=${seance.getId()}" class="text-danger"><i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                </c:forEach>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    <c:if test="${empty listeSeances}">
+                                        <tr>
+                                            <td colspan="6" class="text-center">Aucune séance trouvée.</td>
+                                        </tr>
+                                    </c:if>
+                                    <c:forEach var="seance" items="${listeSeances}">
+                                        <tr>
+                                            <td>${seance.getId()}</td>
+                                            <td>${seance.getCoursId()}</td>
+                                            <td>${seance.getDateSeance()}</td>
+                                            <td>${seance.getHeureDebut()}</td>
+                                            <td>${seance.getHeureFin()}</td>
+                                            <td>
+                                                <a href="${pageContext.request.contextPath}/seance?id_edt=${seance.getId()}"><i class="fa fa-edit"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="${pageContext.request.contextPath}/seance?id_del=${seance.getId()}" class="text-danger"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Include Bootstrap JS -->
-  
+        <!-- Include Bootstrap JS -->
+
         <!-- Include Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script>

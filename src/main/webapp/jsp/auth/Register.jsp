@@ -98,16 +98,20 @@
 <body>
     <div class="container">
         <div class="image-section">
-            <img src="registerr.jpeg" alt="Your Image">
+            <img src="images/registre.jpeg" alt="Your Image">
         </div>
         <div class="form-section">
             <h1>Create an Account</h1>
             <form action="register" method="post">
                 <input type="text" name="username" placeholder="Username" required><br>
-                <input type="password" name="password" placeholder="Password" required><br>
+                
+                
                 <input type="text" name="phone" placeholder="Phone" required><br>
                 <input type="text" name="address" placeholder="Address" required><br>
                 <input type="text" name="email" placeholder="Email" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                
+                <input type="password" name="rpassword" placeholder="Repeat Password" required><br>
                 <button type="submit">Register</button>
             </form>
             <br>

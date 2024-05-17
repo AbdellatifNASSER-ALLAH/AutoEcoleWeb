@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <!-- Add form elements here -->
                <c:choose>
-        <c:when test="${not empty edtCandidata}">
+        <c:when test="${not empty edtCandidat}">
             <form action="${pageContext.request.contextPath}/candidat" method="post">
                 <div class="mb-3">
                     <label for="nom" class="form-label">Nom </label>
@@ -96,10 +96,10 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>ID de candidat</th>
-                                    <th>Montant</th>
-                                    <th>Date de Candidats</th>
-                                    <th>Mode de Candidats</th>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th>Address</th>
+                                    <th>Telephone</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -112,6 +112,7 @@
       <c:forEach var="candidat" items="${listeCandidats}">
         <tr>
             <td>${candidat.getId()}</td>
+              <td>${candidat.getNom()}</td>
             <td>${candidat.getPrenom()}</td>
             <td>${candidat.getAdresse()}</td>
             <td>${candidat.getTelephone()}</td>
